@@ -1,0 +1,19 @@
+.departments-wrapper {
+  overflow: scroll;
+}
+.departments-wrapper header {
+  padding: var(--distancing-large) var(--distancing-maximum)
+    var(--distancing-large);
+  margin-bottom: var(--distancing-regular);
+  /* border-bottom: 4px solid var(--red-500); */
+}
+
+.departments-wrapper section {
+  margin-left: var(--distancing-maximum);
+}
+
+.search-department {
+  display: flex;
+  width: 18rem;
+  margin-bottom: var(--distancing-regular);
+}

@@ -1,0 +1,24 @@
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper svg {
+  height: var(--icon-regular);
+  width: var(--icon-regular);
+  position: relative;
+  left: var(--distancing-minimum);
+  z-index: 1;
+  color: var(--gray-500);
+}
+
+.input-with-icon {
+  flex: 1;
+  padding-left: var(--distancing-maximum);
+  position: relative;
+
+  left: calc(
+    var(--distancing-maximum) - 4 * var(--distancing-minimum) -
+      var(--icon-regular)
+  );
+}

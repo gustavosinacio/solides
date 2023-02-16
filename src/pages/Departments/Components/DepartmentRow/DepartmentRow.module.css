@@ -1,0 +1,5 @@
+.row {
+  border-radius: 8px;
+  border: 1px solid var(--gray-600);
+  padding: var(--distancing-regular);
+}

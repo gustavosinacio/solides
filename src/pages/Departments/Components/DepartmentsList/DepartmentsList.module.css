@@ -1,0 +1,69 @@
+.departments-list-wrapper {
+  overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+  flex: 1;
+
+  height: calc(100vh - var(--header-height) - 9.5rem);
+}
+
+.table {
+  table-layout: fixed;
+  border-collapse: separate;
+  vertical-align: middle;
+  padding: 0 var(--distancing-minimum) var(--distancing-minimum) 0;
+}
+
+.table thead th {
+  background-color: var(--gray-800);
+  text-align: start;
+  padding: var(--distancing-small);
+
+  position: sticky;
+  top: 0px;
+}
+
+.table tbody td {
+  padding: var(--distancing-small);
+}
+
+.table tbody td:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.table tbody td:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.table thead th:nth-child(n) {
+  width: 18%;
+}
+.table thead th:nth-child(1) {
+  width: 46%;
+}
+
+.table tbody tr {
+  transition: filter 0.1s;
+}
+
+.table tbody tr:hover {
+  font-weight: var(--weight-bold);
+  filter: contrast(0.9);
+  word-wrap: normal;
+}
+
+.table tbody td:nth-child(1),
+thead th:nth-child(1) {
+  text-align: start;
+}
+
+.table tbody td:not(:nth-child(1)),
+thead th:not(:nth-child(1)) {
+  text-align: center;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: var(--gray-900);
+}
+.table tbody tr:nth-child(even) {
+  background-color: var(--gray-800);
+}
