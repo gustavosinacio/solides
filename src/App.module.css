@@ -1,4 +1,3 @@
-.dashboard-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
+.app-wrapper {
+  height: 100vh;
 }

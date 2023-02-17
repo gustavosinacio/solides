@@ -1,6 +1,6 @@
 import { MagnifyingGlass } from "phosphor-react";
-import { Input } from "../../components/InputWithIcon/InputWithIcon";
-import { DepartmentsList } from "./Components/DepartmentsList/DepartmentsList";
+import { InputWithIcon } from "../../components/InputWithIcon";
+import { DepartmentsList } from "./Components/DepartmentsList";
 import styles from "./Departments.module.css";
 
 export function Departments() {
@@ -11,7 +11,7 @@ export function Departments() {
       </header>
 
       <section>
-        <Input
+        <InputWithIcon
           wrapperClassName={styles["search-department"]}
           placeholder="Pesquise um departamento"
           type="text"

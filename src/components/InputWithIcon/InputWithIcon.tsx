@@ -9,7 +9,7 @@ type InputWithIconProps = {
   >;
 };
 
-export const Input: React.FC<
+export const InputWithIcon: React.FC<
   React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement

@@ -11,6 +11,7 @@
 
   --gray-transparent-500: rgba(130, 130, 125, 0.1);
 
+  --purple-700: rgb(99, 70, 179);
   --purple-500: rgb(87, 63, 152);
 
   --red-500: rgb(220, 78, 84);
@@ -31,9 +32,6 @@
   --font-color: var(--gray-900);
   --font-color-opposite: var(--white);
 
-  --header-height: 6rem;
-  --header-border: 8px;
-
   --h1-fontsize: 2rem;
 
   --distancing-minimum: 0.5rem;
@@ -44,6 +42,13 @@
 
   --icon-regular: 1.5rem;
   --icon-large: 2rem;
+
+  --header-height: 6rem;
+  --header-border: 8px;
+
+  --border-width-regular: 4px;
+
+  --border-radius-large: 8px;
 
   --global-input-indent: var(--distancing-minimum);
 }
@@ -61,7 +66,7 @@ body {
 
   height: 100vh;
 
-  overflow: auto;
+  overflow: hidden;
 }
 
 body,

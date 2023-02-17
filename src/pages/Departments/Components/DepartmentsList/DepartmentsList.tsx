@@ -19,6 +19,7 @@ export function DepartmentsList() {
         <tbody>
           {departments.map(
             ({
+              id,
               title,
               lastUpdatedAt,
               numberOfEmployees,
@@ -26,6 +27,7 @@ export function DepartmentsList() {
               departmentHead,
             }) => (
               <DepartmentRow
+                key={id}
                 title={title + (Math.random() * 10000).toFixed(0)}
                 lastUpdatedAt={new Date(lastUpdatedAt)}
                 numberOfEmployees={numberOfEmployees}

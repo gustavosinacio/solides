@@ -1,8 +1,6 @@
 .departments-wrapper > header {
   padding: var(--distancing-large) var(--distancing-maximum)
     var(--distancing-large);
-  margin-bottom: var(--distancing-regular);
-  /* border-bottom: 4px solid var(--red-500); */
 }
 
 .departments-wrapper > section {
