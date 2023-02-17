@@ -3,7 +3,7 @@
   align-items: center;
 }
 
-.input-wrapper svg {
+.input-wrapper > svg {
   height: var(--icon-regular);
   width: var(--icon-regular);
   position: relative;
@@ -16,6 +16,7 @@
   flex: 1;
   padding-left: var(--distancing-maximum);
   position: relative;
+  height: 100%;
 
   left: calc(
     var(--distancing-maximum) - 4 * var(--distancing-minimum) -

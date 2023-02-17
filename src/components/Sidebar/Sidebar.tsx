@@ -1,42 +1,40 @@
 import styles from "./Sidebar.module.css";
 import {
-  List,
-  Buildings,
-  UsersThree,
-  Scroll,
-  Gear,
-  UserSquare,
+  List as ListIcon,
+  Buildings as BuildingsIcon,
+  UsersThree as UsersThreeIcon,
+  Scroll as ScrollIcon,
+  Gear as GearIcon,
+  UserSquare as UserSquareIcon,
 } from "phosphor-react";
-
-import { iconSmall } from "../../theme/sizes";
 
 export function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <header>
-        <List />
+        <ListIcon />
         <h1>Áreas</h1>
       </header>
 
       <menu>
         <nav>
-          <Buildings />
+          <BuildingsIcon />
           <a href="#">Departamentos</a>
         </nav>
         <nav>
-          <UsersThree />
+          <UsersThreeIcon />
           <a href="#">Colaboradores</a>
         </nav>
         <nav>
-          <Scroll />
+          <ScrollIcon />
           <a href="#">Relatórios</a>
         </nav>
         <nav>
-          <Gear />
+          <GearIcon />
           <a href="#">Configurações</a>
         </nav>
         <nav>
-          <UserSquare />
+          <UserSquareIcon />
           <a href="#">Conta</a>
         </nav>
       </menu>

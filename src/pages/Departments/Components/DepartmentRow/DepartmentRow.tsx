@@ -1,10 +1,9 @@
-import styles from "./DepartmentRow.module.css";
-
 type DepartmentRowProps = {
   title: string;
   lastUpdatedAt: Date;
   numberOfEmployees: number;
   numberOfWarnings: number;
+  departmentHead: string;
 };
 
 export const DepartmentRow: React.FC<DepartmentRowProps> = ({
@@ -12,9 +11,10 @@ export const DepartmentRow: React.FC<DepartmentRowProps> = ({
   lastUpdatedAt,
   numberOfEmployees = 0,
   numberOfWarnings = 0,
+  departmentHead,
 }) => {
   return (
-    <tr className={styles.row}>
+    <tr>
       <td>{title}</td>
       <td>
         {Intl.DateTimeFormat("pt-BR", {
@@ -23,6 +23,7 @@ export const DepartmentRow: React.FC<DepartmentRowProps> = ({
       </td>
       <td>{numberOfEmployees}</td>
       <td>{numberOfWarnings}</td>
+      <td>{departmentHead}</td>
     </tr>
   );
 };

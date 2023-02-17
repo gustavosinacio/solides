@@ -5,7 +5,7 @@
   padding: 0 0 var(--distancing-regular);
 }
 
-.sidebar header {
+.sidebar > header {
   display: flex;
   align-items: center;
   border-bottom: 4px solid var(--yellow-500);
@@ -14,32 +14,41 @@
   margin-bottom: var(--distancing-regular);
 }
 
-.sidebar header svg {
+.sidebar > header > h1 {
+  color: var(--font-color-opposite);
+  font-weight: var(--weight-regular);
+}
+
+.sidebar > header > svg {
   margin-right: var(--distancing-small);
   width: var(--icon-large);
   height: var(--icon-large);
 }
 
-.sidebar menu {
+.sidebar svg {
+  color: var(--font-color-opposite);
+}
+
+.sidebar > menu {
   padding: 0 var(--distancing-regular);
 }
-.sidebar menu nav {
+.sidebar > menu > nav {
   padding: var(--distancing-minimum) 0;
   display: flex;
   align-items: center;
 }
-.sidebar menu nav svg {
+.sidebar > menu > nav > svg {
   margin-right: var(--distancing-minimum);
   width: var(--icon-regular);
   height: var(--icon-regular);
 }
 
-.sidebar menu nav a {
+.sidebar > menu > nav > a {
   text-decoration: none;
-  color: var(--gray-300);
+  color: var(--font-color-opposite);
   font-size: 1.25rem;
 }
 
-.sidebar menu nav a:hover {
+.sidebar > menu > nav > a:hover {
   font-weight: var(--weight-bold);
 }
