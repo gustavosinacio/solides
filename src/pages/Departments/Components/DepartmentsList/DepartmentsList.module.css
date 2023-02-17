@@ -1,5 +1,5 @@
 .departments-list-wrapper {
-  overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+  overflow: auto;
   flex: 1;
 
   height: calc(100vh - var(--header-height) - 9.5rem);
@@ -10,6 +10,8 @@
   border-collapse: separate;
   vertical-align: middle;
   padding: 0 var(--distancing-minimum) var(--distancing-minimum) 0;
+
+  max-width: 76rem;
 }
 
 .table thead th {
