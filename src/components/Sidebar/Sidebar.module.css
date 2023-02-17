@@ -8,7 +8,7 @@
 .sidebar > header {
   display: flex;
   align-items: center;
-  border-bottom: 4px solid var(--yellow-500);
+  border-bottom: 4px solid var(--white);
   padding: var(--distancing-large) var(--distancing-regular)
     var(--distancing-large);
   margin-bottom: var(--distancing-regular);
