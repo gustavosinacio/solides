@@ -8,6 +8,8 @@
   --gray-800: rgb(35, 35, 32);
   --gray-900: rgb(18, 18, 20);
 
+  --gray-transparent-500: rgba(130, 130, 125, 0.1);
+
   --purple-500: rgb(87, 63, 152);
 
   --red-500: rgb(220, 78, 84);
@@ -55,6 +57,8 @@ body {
   -webkit-font-smoothing: antialiased;
 
   height: 100vh;
+
+  overflow: auto;
 }
 
 body,
@@ -90,4 +94,15 @@ ul {
 
 h1 {
   font-weight: var(--weight-light);
+}
+
+::-webkit-scrollbar {
+  /* height: 12px; */
+  width: 12px;
+  background-color: var(--gray-transparent-500);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-500);
+  -webkit-border-radius: 2px;
 }

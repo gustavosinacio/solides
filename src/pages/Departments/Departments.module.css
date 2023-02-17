@@ -1,6 +1,3 @@
-.departments-wrapper {
-  overflow: scroll;
-}
 .departments-wrapper header {
   padding: var(--distancing-large) var(--distancing-maximum)
     var(--distancing-large);
