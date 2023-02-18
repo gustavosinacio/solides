@@ -17,11 +17,11 @@ export const InputWithIcon: React.FC<
     InputWithIconProps
 > = ({ inputClassName, wrapperClassName, icon: Icon, ...props }) => {
   return (
-    <div className={`${styles["input-wrapper"]} ${wrapperClassName}`}>
+    <div className={`${styles["input-wrapper"]} ${wrapperClassName || ""}`}>
       <Icon />
 
       <input
-        className={`${styles["input-with-icon"]} ${inputClassName}`}
+        className={`${styles["input-with-icon"]} ${inputClassName || ""}`}
         {...props}
       />
     </div>

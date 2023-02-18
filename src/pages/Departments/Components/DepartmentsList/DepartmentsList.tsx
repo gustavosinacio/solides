@@ -1,9 +1,11 @@
-import departments from "../../../../mocks/departments.json";
-
 import { DepartmentRow } from "../DepartmentRow/DepartmentRow";
 import styles from "./DepartmentsList.module.css";
 
-export function DepartmentsList() {
+import type { Department } from "../../Departments";
+
+type DepartmentListProps = { data: Department[] };
+
+export function DepartmentsList({ data }: DepartmentListProps) {
   return (
     <div className={styles["departments-list-wrapper"]}>
       <table className={styles.table}>
@@ -17,7 +19,7 @@ export function DepartmentsList() {
           </tr>
         </thead>
         <tbody>
-          {departments.map(
+          {data.map(
             ({
               id,
               title,
@@ -28,7 +30,7 @@ export function DepartmentsList() {
             }) => (
               <DepartmentRow
                 key={id}
-                title={title + (Math.random() * 10000).toFixed(0)}
+                title={title}
                 lastUpdatedAt={new Date(lastUpdatedAt)}
                 numberOfEmployees={numberOfEmployees}
                 numberOfWarnings={numberOfWarnings}
