@@ -20,7 +20,6 @@
 
 .form-wrapper > form input {
   height: 2.5rem;
-  border-radius: 40px;
   width: 100%;
   text-indent: 20px;
   font-size: 1.25rem;
@@ -36,7 +35,7 @@
   background-color: var(--purple-500);
   border: 2px solid var(--white);
 
-  border-radius: 40px;
+  border-radius: 8px;
   color: var(--white);
 }
 

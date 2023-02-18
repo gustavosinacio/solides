@@ -1,6 +1,12 @@
+import { Gear, Envelope } from "phosphor-react";
+import { FormEvent } from "react";
+
+import { InputWithIcon } from "../../../components/InputWithIcon";
 import styles from "./Login.module.css";
 
 export function Login() {
+  const handleLogin = (event: FormEvent<HTMLFormElement>) => {};
+
   return (
     <div className={styles["login-page"]}>
       <div className={styles["form-wrapper"]}>
@@ -14,12 +20,22 @@ export function Login() {
           </div>
         </header>
 
-        <form>
+        <form onSubmit={handleLogin}>
           <h3>Email</h3>
-          <input placeholder="Digite seu email" type="email" />
+          <InputWithIcon
+            icon={Envelope}
+            required
+            placeholder="Digite seu email"
+            type="email"
+          />
 
           <h3>Senha</h3>
-          <input placeholder="Digite sua senha" type="password" />
+          <InputWithIcon
+            icon={Gear}
+            required
+            placeholder="Digite sua senha"
+            type="password"
+          />
 
           <button type="submit">Entrar</button>
         </form>

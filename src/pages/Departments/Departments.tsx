@@ -1,5 +1,5 @@
 import { MagnifyingGlass } from "phosphor-react";
-import { useState, ChangeEvent, useEffect } from "react";
+import { useState, ChangeEvent, useEffect, FocusEvent } from "react";
 import { InputWithIcon } from "../../components/InputWithIcon";
 import { DepartmentsList } from "./Components/DepartmentsList";
 import styles from "./Departments.module.css";
@@ -26,6 +26,10 @@ export function Departments() {
     target,
   }: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(target.value);
+  };
+
+  const handleInputFocus = ({ target }: FocusEvent<HTMLInputElement>) => {
+    target.select();
   };
 
   useEffect(() => {
@@ -57,6 +61,7 @@ export function Departments() {
           icon={MagnifyingGlass}
           value={searchValue}
           onChange={handleSearchInputChange}
+          onFocus={handleInputFocus}
         />
 
         <DepartmentsList data={filteredDepartments} />

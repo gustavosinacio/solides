@@ -1,6 +1,10 @@
 .input-wrapper {
   display: flex;
   align-items: center;
+  width: calc(
+    100% + var(--distancing-maximum) - 4 * var(--distancing-minimum) +
+      var(--icon-regular)
+  );
 }
 
 .input-wrapper > svg {
