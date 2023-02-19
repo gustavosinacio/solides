@@ -1,22 +1,54 @@
 .header {
   background-color: var(--purple-500);
+  color: var(--white);
   height: var(--header-height);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
 }
 
-.header > div > h1 {
+.header .colored-header-section > h1 {
   margin: var(--distancing-regular);
-  color: var(--white);
   font-weight: var(--weight-regular);
 }
 
-.header > div {
+.header .colored-header-section {
   flex: 1;
+  height: 100%;
+}
+
+.header .colored-header-section:first-child {
   display: flex;
   align-items: center;
-  height: 100%;
+}
+
+.header .colored-header-section:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: var(--distancing-regular);
+}
+.header .colored-header-section:last-child button {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+
+  border-radius: 8px;
+  padding: 6px 8px;
+
+  transition: box-shadow 0.3s;
+}
+
+.header .colored-header-section:last-child button:hover {
+  box-shadow: 4px 4px 10px var(--purple-300), -4px -4px 10px var(--purple-700);
+}
+
+.header .colored-header-section:last-child button svg {
+  height: var(--icon-regular);
+  width: var(--icon-regular);
+  top: 2px;
+  left: 1px;
+  position: relative;
 }
 
 .header .colored-header-section:nth-child(1) {

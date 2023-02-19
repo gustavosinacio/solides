@@ -4,7 +4,6 @@ import { InputWithIcon } from "../../components/InputWithIcon";
 import { DepartmentsList } from "./Components/DepartmentsList";
 import styles from "./Departments.module.css";
 
-import departments from "../../mocks/departments.json";
 import { searchStringInObjectArray } from "../utils";
 
 export type Department = {
@@ -19,8 +18,10 @@ export type Department = {
 export function Departments() {
   const [searchValue, setSearchValue] = useState<string>("department w");
   const [timeoutId, setTimeoutId] = useState<number>();
-  const [filteredDepartments, setFilteredDepartments] =
-    useState<Department[]>(departments);
+  const [departments, setDepartments] = useState([]);
+  const [filteredDepartments, setFilteredDepartments] = useState<Department[]>(
+    []
+  );
 
   const handleSearchInputChange = ({
     target,

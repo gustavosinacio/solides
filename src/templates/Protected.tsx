@@ -18,6 +18,7 @@ export function Protected({
 
   useEffect(() => {
     if (!isUserAuthenticated) navigate("login");
+    else navigate("/");
   }, []);
 
   return (

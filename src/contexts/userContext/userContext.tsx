@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export type UserData = {
   email: string;
@@ -34,7 +34,24 @@ export const UserContextProvider: React.FC<UserContextProviderProps> = ({
   const clearUserData = () => {
     setEmail("");
     setName("");
+    localStorage.removeItem("user");
   };
+
+  useEffect(() => {
+    const userString = localStorage.getItem("user");
+
+    if (userString) {
+      const { email, name } = JSON.parse(userString);
+      setEmail(email);
+      setName(name);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (email && name) {
+      localStorage.setItem("user", JSON.stringify({ email, name }));
+    }
+  }, [email, name]);
 
   return (
     <UserContext.Provider

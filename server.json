@@ -1,0 +1,275 @@
+{
+  "users": [
+    {
+      "email": "test@email.com",
+      "name": "Test Name",
+      "password": "123456"
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "title": "First Department x-czxad",
+      "lastUpdatedAt": "2023-02-01 13:31:18",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Maia Zulema"
+    },
+    {
+      "id": 2,
+      "title": "Another department    with a long name to test departments table listing style right here x-712g34b",
+      "lastUpdatedAt": "2023-01-17 14:27:39",
+      "numberOfEmployees": 8,
+      "numberOfWarnings": 6,
+      "departmentHead": "Avelina Eulalia"
+    },
+    {
+      "id": 3,
+      "title": "Department x-qwef31",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Adedayo Dušanka"
+    },
+    {
+      "id": 4,
+      "title": "Department x-edfg233",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Reiner Rüzgar"
+    },
+    {
+      "id": 5,
+      "title": "Department x-mcai9u",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Inna Gresham"
+    },
+    {
+      "id": 6,
+      "title": "Department x-9102384",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Gale Anselmo"
+    },
+    {
+      "id": 7,
+      "title": "Department x-ckla",
+      "lastUpdatedAt": "2022-08-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Angela Gulbrand"
+    },
+    {
+      "id": 8,
+      "title": "Department k-qopwie",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Cebrián Egill"
+    },
+    {
+      "id": 9,
+      "title": "Department k-mklxaq",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Mokosh Cepheus"
+    },
+    {
+      "id": 10,
+      "title": "Department k-1297834y",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Marko Dos-teh-seh"
+    },
+    {
+      "id": 11,
+      "title": "Department k-bcn7wyt",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Borislava Bibigul"
+    },
+    {
+      "id": 12,
+      "title": "Department k-1029u3j4",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "María Ángeles Nalini"
+    },
+    {
+      "id": 13,
+      "title": "Department k-koasj1",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Embla Mayson"
+    },
+    {
+      "id": 14,
+      "title": "Department k-10982h4e",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Argos Kuzman"
+    },
+    {
+      "id": 15,
+      "title": "Department z-0ioa9sxcjc12",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Joseph Annalise"
+    },
+    {
+      "id": 16,
+      "title": "Department z-j98xcd1",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Alister Gonca"
+    },
+    {
+      "id": 17,
+      "title": "Department z-90ok1s0",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Sharleen Helgi"
+    },
+    {
+      "id": 18,
+      "title": "Department z-1o2ih34",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Konstanty Samir"
+    },
+    {
+      "id": 19,
+      "title": "Department z-n1iujo2344",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Ríonach Ainoa"
+    },
+    {
+      "id": 20,
+      "title": "Department z-ojinA12",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Friday Siw"
+    },
+    {
+      "id": 21,
+      "title": "Department z-nujxc9iu21",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Susannah Felicitas"
+    },
+    {
+      "id": 22,
+      "title": "Department y-md9u12",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Stefana Orso"
+    },
+    {
+      "id": 23,
+      "title": "Department y-zlk0912",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Fábio Shivani"
+    },
+    {
+      "id": 24,
+      "title": "Department y-10982j3",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Palmira Nanda"
+    },
+    {
+      "id": 25,
+      "title": "Department y-lz0o12",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Pranav Aviram"
+    },
+    {
+      "id": 26,
+      "title": "Department y-masnbdb32",
+      "lastUpdatedAt": "2022-02-14 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Seleukos Erdem"
+    },
+    {
+      "id": 27,
+      "title": "Department y-a768sdt",
+      "lastUpdatedAt": "2022-02-14 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Noortje Alaba"
+    },
+    {
+      "id": 28,
+      "title": "Department w-bdn7t63",
+      "lastUpdatedAt": "2022-02-14 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Fúlvio Rama"
+    },
+    {
+      "id": 29,
+      "title": "Department w-a890suud",
+      "lastUpdatedAt": "2022-02-14 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Palmira Nanda"
+    },
+    {
+      "id": 31,
+      "title": "Department w-89h123",
+      "lastUpdatedAt": "2022-02-14 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Pranav Aviram"
+    },
+    {
+      "id": 32,
+      "title": "Department w-09as8udu",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Seleukos Erdem"
+    },
+    {
+      "id": 33,
+      "title": "Department w-aklms3",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Noortje Alaba"
+    },
+    {
+      "id": 34,
+      "title": "Last Department w-x9832",
+      "lastUpdatedAt": "2023-02-04 11:54:12",
+      "numberOfEmployees": 4,
+      "numberOfWarnings": 2,
+      "departmentHead": "Fúlvio Rama"
+    }
+  ]
+}
