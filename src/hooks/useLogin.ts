@@ -11,10 +11,13 @@ export function useLogin() {
   return {
     login: async (email: string, password: string) => {
       setIsFetching(true);
+
       const delayed = await new Promise((resolve) =>
         setTimeout(resolve, DELAY_VALUE_IN_MS)
       );
+
       await delayed;
+
       setIsFetching(false);
 
       if (

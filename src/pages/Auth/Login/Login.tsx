@@ -1,5 +1,5 @@
 import { Gear, Envelope } from "phosphor-react";
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { InputWithIcon } from "../../../components/InputWithIcon";
@@ -18,6 +18,7 @@ interface LoginForm extends HTMLFormElement {
 export function Login() {
   const navigate = useNavigate();
   const { login, isFetching } = useLogin();
+  const [loginError, setLoginError] = useState(false);
 
   const handleLogin = async (event: FormEvent<LoginForm>) => {
     event.preventDefault();
@@ -27,7 +28,12 @@ export function Login() {
 
     const loginSuccessful = await login(email, password);
 
-    if (loginSuccessful) navigate("/");
+    if (loginSuccessful) {
+      navigate("/");
+      setLoginError(false);
+    } else {
+      setLoginError(true);
+    }
   };
 
   return (
@@ -61,6 +67,12 @@ export function Login() {
             placeholder="Digite sua senha"
             type="password"
           />
+
+          {loginError && (
+            <div className={styles["error-message-wrapper"]}>
+              <span>Erro ao fazer login. Tente novamente.</span>
+            </div>
+          )}
 
           <button disabled={isFetching} type="submit">
             {isFetching ? "Carregando" : "Entrar"}

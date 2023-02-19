@@ -15,22 +15,11 @@ export const useDepartments = () => {
   const [departments, setDepartments] = useState<Department[]>([]);
   const [isFetching, setIsFetching] = useState(false);
 
-  async function fetchDepartments() {
-    setIsFetching(true);
-    try {
-      const data = await (await fetch(`${baseURL}/departments`)).json();
-      setDepartments(data);
-    } catch {
-    } finally {
-      setIsFetching(false);
-    }
-  }
-
   async function searchDepartments(searchString: string) {
     setIsFetching(true);
     try {
       const data = await (
-        await fetch(`${baseURL}/departments?q=${searchString}`)
+        await fetch(`${baseURL}/departments?_limit=20&q=${searchString}`)
       ).json();
 
       setDepartments(data);
@@ -40,14 +29,9 @@ export const useDepartments = () => {
     }
   }
 
-  useEffect(() => {
-    fetchDepartments();
-  }, []);
-
   return {
     departments,
     isFetching,
-    fetchDepartments,
     searchDepartments,
   };
 };

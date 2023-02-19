@@ -1,7 +1,8 @@
 import { DepartmentRow } from "../DepartmentRow/DepartmentRow";
-import styles from "./DepartmentsList.module.css";
 
-import type { Department } from "../../Departments";
+import { Department } from "../../../../hooks/useDepartments";
+
+import styles from "./DepartmentsList.module.css";
 
 type DepartmentListProps = { data: Department[] };
 
