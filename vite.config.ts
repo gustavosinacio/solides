@@ -7,7 +7,8 @@ export default defineConfig(({ command, mode }) => {
   return {
     plugins: [react()],
     server: {
-      port: env.PORT,
+      port: env.DOCKER_CONTAINER_PORT,
+      host: true,
     },
     define: {
       __APP_ENV__: env.APP_ENV,
