@@ -13,11 +13,17 @@ export type Department = {
 
 export const useDepartments = () => {
   const [departments, setDepartments] = useState<Department[]>([]);
+  const [isFetching, setIsFetching] = useState(false);
 
   async function fetchDepartments() {
-    const data = await (await fetch(`${baseURL}/departments`)).json();
-
-    setDepartments(data);
+    setIsFetching(true);
+    try {
+      const data = await (await fetch(`${baseURL}/departments`)).json();
+      setDepartments(data);
+    } catch {
+    } finally {
+      setIsFetching(false);
+    }
   }
 
   useEffect(() => {
@@ -26,6 +32,7 @@ export const useDepartments = () => {
 
   return {
     departments,
+    isFetching,
     fetchDepartments,
   };
 };

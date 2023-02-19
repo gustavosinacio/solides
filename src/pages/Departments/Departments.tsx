@@ -1,4 +1,4 @@
-import { MagnifyingGlass } from "phosphor-react";
+import { CircleNotch, MagnifyingGlass } from "phosphor-react";
 import { useState, ChangeEvent, useEffect, FocusEvent } from "react";
 
 import { InputWithIcon } from "../../components/InputWithIcon";
@@ -11,7 +11,7 @@ import { searchStringInObjectArray } from "../utils";
 import styles from "./Departments.module.css";
 
 export function Departments() {
-  const { departments } = useDepartments();
+  const { departments, isFetching } = useDepartments();
 
   const [searchValue, setSearchValue] = useState<string>("department w");
   const [timeoutId, setTimeoutId] = useState<number>();
@@ -45,7 +45,11 @@ export function Departments() {
     );
   }, [departments, searchValue]);
 
-  return (
+  return isFetching ? (
+    <div className={styles.loading}>
+      <CircleNotch className={styles.rotate} />
+    </div>
+  ) : (
     <div className={styles["departments-wrapper"]}>
       <header>
         <h1>Departamentos</h1>
