@@ -26,6 +26,20 @@ export const useDepartments = () => {
     }
   }
 
+  async function searchDepartments(searchString: string) {
+    setIsFetching(true);
+    try {
+      const data = await (
+        await fetch(`${baseURL}/departments?q=${searchString}`)
+      ).json();
+
+      setDepartments(data);
+    } catch {
+    } finally {
+      setIsFetching(false);
+    }
+  }
+
   useEffect(() => {
     fetchDepartments();
   }, []);
@@ -34,5 +48,6 @@ export const useDepartments = () => {
     departments,
     isFetching,
     fetchDepartments,
+    searchDepartments,
   };
 };

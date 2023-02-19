@@ -4,21 +4,15 @@ import { useState, ChangeEvent, useEffect, FocusEvent } from "react";
 import { InputWithIcon } from "../../components/InputWithIcon";
 import { DepartmentsList } from "./Components/DepartmentsList";
 
-import { Department, useDepartments } from "../../hooks/useDepartments";
-
-import { searchStringInObjectArray } from "../utils";
+import { useDepartments } from "../../hooks/useDepartments";
 
 import styles from "./Departments.module.css";
 
 export function Departments() {
-  const { departments, isFetching } = useDepartments();
+  const { departments, isFetching, searchDepartments } = useDepartments();
 
-  const [searchValue, setSearchValue] = useState<string>("department w");
+  const [searchValue, setSearchValue] = useState<string>("");
   const [timeoutId, setTimeoutId] = useState<number>();
-
-  const [filteredDepartments, setFilteredDepartments] = useState<Department[]>(
-    []
-  );
 
   const handleSearchInputChange = ({
     target,
@@ -31,25 +25,16 @@ export function Departments() {
   };
 
   useEffect(() => {
-    const found = searchStringInObjectArray<Department>(
-      departments,
-      searchValue
-    );
-
     clearTimeout(timeoutId);
 
     setTimeoutId(
       setTimeout(() => {
-        setFilteredDepartments(found);
-      }, 500)
+        searchDepartments(searchValue);
+      }, 1000)
     );
-  }, [departments, searchValue]);
+  }, [searchValue]);
 
-  return isFetching ? (
-    <div className={styles.loading}>
-      <CircleNotch className={styles.rotate} />
-    </div>
-  ) : (
+  return (
     <div className={styles["departments-wrapper"]}>
       <header>
         <h1>Departamentos</h1>
@@ -66,7 +51,13 @@ export function Departments() {
           onFocus={handleInputFocus}
         />
 
-        <DepartmentsList data={filteredDepartments} />
+        {isFetching ? (
+          <div className={styles.loading}>
+            <CircleNotch className={styles.rotate} />
+          </div>
+        ) : (
+          <DepartmentsList data={departments} />
+        )}
       </section>
     </div>
   );
