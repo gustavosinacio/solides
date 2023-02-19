@@ -13,8 +13,6 @@ export function Router() {
 
   const isUserAuthenticated = useMemo(() => !!user.email, [user.email]);
 
-  console.log(98211, isUserAuthenticated);
-
   return isUserAuthenticated ? (
     <Routes>
       <Route element={<Protected isUserAuthenticated={isUserAuthenticated} />}>

@@ -1,24 +1,21 @@
 import { MagnifyingGlass } from "phosphor-react";
 import { useState, ChangeEvent, useEffect, FocusEvent } from "react";
+
 import { InputWithIcon } from "../../components/InputWithIcon";
 import { DepartmentsList } from "./Components/DepartmentsList";
-import styles from "./Departments.module.css";
+
+import { Department, useDepartments } from "../../hooks/useDepartments";
 
 import { searchStringInObjectArray } from "../utils";
 
-export type Department = {
-  id: number;
-  title: string;
-  lastUpdatedAt: string;
-  numberOfEmployees: number;
-  numberOfWarnings: number;
-  departmentHead: string;
-};
+import styles from "./Departments.module.css";
 
 export function Departments() {
+  const { departments } = useDepartments();
+
   const [searchValue, setSearchValue] = useState<string>("department w");
   const [timeoutId, setTimeoutId] = useState<number>();
-  const [departments, setDepartments] = useState([]);
+
   const [filteredDepartments, setFilteredDepartments] = useState<Department[]>(
     []
   );
@@ -46,7 +43,7 @@ export function Departments() {
         setFilteredDepartments(found);
       }, 500)
     );
-  }, [searchValue]);
+  }, [departments, searchValue]);
 
   return (
     <div className={styles["departments-wrapper"]}>
