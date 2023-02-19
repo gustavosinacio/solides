@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../contexts/userContext";
-
-const DELAY_VALUE_IN_MS = 1000;
+import { delay } from "../mocks/delay";
 
 export function useLogin() {
   const [isFetching, setIsFetching] = useState(false);
@@ -12,11 +11,7 @@ export function useLogin() {
     login: async (email: string, password: string) => {
       setIsFetching(true);
 
-      const delayed = await new Promise((resolve) =>
-        setTimeout(resolve, DELAY_VALUE_IN_MS)
-      );
-
-      await delayed;
+      await delay();
 
       setIsFetching(false);
 

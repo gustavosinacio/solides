@@ -68,11 +68,9 @@ export function Login() {
             type="password"
           />
 
-          {loginError && (
-            <div className={styles["error-message-wrapper"]}>
-              <span>Erro ao fazer login. Tente novamente.</span>
-            </div>
-          )}
+          <div className={styles["error-message-wrapper"]}>
+            {loginError && <span>Erro ao fazer login. Tente novamente.</span>}
+          </div>
 
           <button disabled={isFetching} type="submit">
             {isFetching ? "Carregando" : "Entrar"}
