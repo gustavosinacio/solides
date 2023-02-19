@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import { baseURL } from "../api";
+import { delay } from "../mocks/delay";
+import mockedDepartments from "../mocks/departments.json";
+import { searchStringInObjectArray } from "../utils";
 
 export type Department = {
   id: number;
@@ -18,9 +20,12 @@ export const useDepartments = () => {
   async function searchDepartments(searchString: string) {
     setIsFetching(true);
     try {
-      const data = await (
-        await fetch(`${baseURL}/departments?_limit=20&q=${searchString}`)
-      ).json();
+      await delay();
+
+      const data = searchStringInObjectArray<Department>(
+        mockedDepartments,
+        searchString
+      );
 
       setDepartments(data);
     } catch {
