@@ -45,10 +45,12 @@
 
 .sidebar > menu > nav > a {
   text-decoration: none;
-  color: var(--font-color-opposite);
+  color: var(--gray-100);
   font-size: 1.25rem;
+  transition: filter 0.3s, color 0.3s;
 }
 
 .sidebar > menu > nav > a:hover {
-  font-weight: var(--weight-bold);
+  filter: brightness(1.4);
+  color: var(--white);
 }
