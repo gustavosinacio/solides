@@ -7,13 +7,6 @@
   margin-left: var(--distancing-maximum);
 }
 
-.search-department {
-  display: flex;
-  width: 23rem;
-  height: 2.5rem;
-  margin-bottom: var(--distancing-regular);
-}
-
 .loading {
   display: flex;
   align-items: center;

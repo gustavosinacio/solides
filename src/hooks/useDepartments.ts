@@ -13,6 +13,8 @@ export type Department = {
   departmentHead: string;
 };
 
+export type SearchDepartments = (searchString: string) => Promise<void>;
+
 export const useDepartments = () => {
   const [departments, setDepartments] = useState<Department[]>([]);
   const [isFetching, setIsFetching] = useState(false);

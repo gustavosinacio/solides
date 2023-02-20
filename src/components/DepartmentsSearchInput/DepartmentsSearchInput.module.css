@@ -1,0 +1,6 @@
+.search-department {
+  display: flex;
+  width: 23rem;
+  height: 2.5rem;
+  margin-bottom: var(--distancing-regular);
+}
