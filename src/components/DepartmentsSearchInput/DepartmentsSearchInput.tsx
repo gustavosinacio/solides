@@ -15,7 +15,7 @@ export function DepartmentsSearchInput({
   searchDepartments,
 }: DepartmentsSearchInputProps) {
   const [searchValue, setSearchValue] = useState<string>("");
-  const [timeoutId, setTimeoutId] = useState<number>();
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>();
 
   const handleSearchInputChange = ({
     target,
@@ -40,7 +40,7 @@ export function DepartmentsSearchInput({
   return (
     <>
       <InputWithIcon
-        id="departmentsSearchInput"
+        aria-label="search-input"
         wrapperClassName={styles["search-department"]}
         placeholder="Pesquise um departamento"
         type="text"
